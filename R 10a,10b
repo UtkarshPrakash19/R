@@ -1,0 +1,20 @@
+data(mtcars)
+selected_vars <- c("mpg", "disp", "hp", "wt")
+par(mfrow = c(1, 1))
+colors <- c("blue", "green", "red", "orange")
+line_widths <- c(1, 1, 1, 2)
+for (i in seq_along(selected_vars)) {
+  var <- selected_vars[i]
+  col <- colors[i]
+  lwd <- line_widths[i]
+  plot(mtcars[, var], type = "n", xlab = "Index", ylab = var, main = paste("Line and Points Plot of", var))
+  lines(mtcars[, var], col = col, lwd = lwd)
+  points(mtcars[, var], col = col, pch = 16)}
+highlight_vars <- c("mpg", "disp", "hp", "wt")
+highlight_colors <- c("red", "green", "blue", "orange")
+for (i in seq_along(highlight_vars)) {
+  var <- highlight_vars[i]
+  col <- highlight_colors[i]
+  lines(mtcars[, var], col = col, lwd = 2)
+  points(mtcars[, var], col = col, pch = 16)}
+#this code give four different graphs hence covers both part A and part B of the question
