@@ -1,21 +1,12 @@
-# Load the mtcars dataset
 data(mtcars)
-# Select four different continuous variables (e.g., mpg, disp, hp, wt)
 selected_vars <- c("mpg", "disp", "hp", "wt")
-# Define colors for the plots
 colors <- c("blue", "green", "red", "orange")
-# Set up the layout for the plots (2 rows, 2 columns)
 par(mfrow = c(2, 2))
-# Create line and point plots for each selected variable
 for (i in 1:length(selected_vars)) {
   var <- selected_vars[i]
   col <- colors[i]
-  # Create an empty plot to set up the axis and labels
   plot(mtcars[, var], type = "n", xlab = "Index", ylab = var, main = paste("Line and Points Plot of", var))
-  # Add lines to the plot with the specified color
   lines(mtcars[, var], col = col)
-  # Find the index of the data point with the highest value for the current variable
   max_index <- which.max(mtcars[, var]) 
-  # Highlight the data point with the highest value using a different color (e.g., black)
   points(max_index, mtcars[max_index, var], col = "black", pch = 16)
 }
