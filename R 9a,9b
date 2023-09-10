@@ -1,0 +1,8 @@
+# Load the mtcars dataset
+data(mtcars)
+#9a
+# Create a scatter plot of mpg versus drat
+plot(mtcars$mpg, mtcars$drat,
+     xlab = "Miles/(US) gallon",
+     ylab = "Rear axle ratio",
+     main = "Miles/(US) gallon vs Rear axle ratio")
