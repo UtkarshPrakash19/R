@@ -1,7 +1,4 @@
-# Load the mtcars dataset (if not already loaded)
 data(mtcars)
-
-# Create a line plot of Miles per (US) gallon (mpg) versus Rear axle ratio (drat)
 plot(mtcars$mpg, type = "l",
      xlab = "Index",
      ylab = "Miles per (US) gallon (mpg)",
@@ -9,10 +6,7 @@ plot(mtcars$mpg, type = "l",
 )
 lines(mtcars$drat, col = "red")
 legend("topright", legend = c("mpg", "drat"), col = c("black", "red"), lty = 1)
-# Load the mtcars dataset (if not already loaded)
 data(mtcars)
-
-# Create a scatterplot of Miles/(US) gallon (mpg) versus Rear axle ratio (drat)
 plot(mtcars$mpg, mtcars$drat,
      xlab = "Miles per (US) gallon (mpg)",
      ylab = "Rear axle ratio (drat)",
